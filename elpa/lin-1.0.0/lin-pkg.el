@@ -1,0 +1,2 @@
+;; Generated package description from lin.el  -*- no-byte-compile: t -*-
+(define-package "lin" "1.0.0" "Make `hl-line-mode' more suitable for selection UIs" '((emacs "27.1")) :commit "09cf249c78385502a2ead30c4fa1468cf96939f7" :authors '(("Protesilaos Stavrou" . "info@protesilaos.com")) :maintainer '("Lin Development" . "~protesilaos/lin@lists.sr.ht") :keywords '("convenience" "faces" "theme") :url "https://git.sr.ht/~protesilaos/lin")

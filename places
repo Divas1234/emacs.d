@@ -1,0 +1,22 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("c:/Users/15703/Downloads/###demo.jl###" . 3432)
+ ("c:/Users/15703/Downloads/emacs.d-dev/.emacs.d-dev/#init.el#" . 1286)
+ ("c:/Users/15703/Downloads/emacs.d-dev/.emacs.d-dev/init.el" . 3)
+ ("c:/Users/15703/Downloads/emacs.d-dev/.emacs.d-dev/" . 129)
+ ("c:/Users/15703/Downloads/####demo.jl####" . 4448)
+ ("c:/Users/15703/Downloads/#demo.jl#" . 1832)
+ ("c:/Users/15703/Downloads/flycheck-status-emoji-20180516.229.tar" . 269)
+ ("c:/Users/15703/Downloads/##demo.jl##" . 1966)
+ ("c:/Users/15703/Downloads/demo.jl" . 6199)
+ ("c:/Users/15703/.emacs.d/init.el" . 719)
+ ("c:/Users/15703/Downloads/#DEMO.MD#" . 363)
+ ("c:/Users/15703/.emacs.d/lisp/pkg-batch.el" . 1132)
+ ("c:/Users/15703/Downloads/DEMO.MD" . 236)
+ ("c:/Users/15703/Downloads/"
+  (dired-filename . "c:/Users/15703/Downloads/demo.jl"))
+ ("c:/Users/15703/.emacs.d/"
+  (dired-filename . "c:/Users/15703/.emacs.d/init.el"))
+ ("c:/Users/"
+  (dired-filename . "c:/Users/15703"))
+ ("c:/Users/15703/"
+  (dired-filename . "c:/Users/15703/Downloads")))
