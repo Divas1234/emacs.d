@@ -8,12 +8,24 @@
          (python-mode . lsp-deferred)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
+  :config
+  (lsp-enable-which-key-integration t)
   :commands (lsp lsp-deferred))
 
-;; optionally
 (use-package lsp-ui
-    :commands lsp-ui-mode
-    :config (lsp-ui-mode t))
+  :init
+  (setq lsp-ui-doc-position 'at-point
+        lsp-ui-doc-show-with-mouse nil
+        lsp-ui-sideline-show-code-actions t)
+  :bind (("C-c A" . lsp-execute-code-action)
+         ("C-c d" . lsp-ui-doc-show)
+         ("C-c I" . lsp-ui-imenu))
+  :commands lsp-ui-mode
+  :config (lsp-ui-mode t))
+
+;; (use-package flycheck
+;;   :defer)
+
 ;; if you are helm user
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 ;; if you are ivy user
@@ -63,10 +75,6 @@
 ;;     (define-key julia-repl-mode-map (kbd "<M-RET>") 'julia-repl-send-line)
 ;;     (define-key julia-repl-mode-map (kbd "<S-return>") 'julia-repl-send-buffer))
 
-;; (use-package lsp-julia
-;;   :config
-;;   (setq lsp-julia-default-environment "~/.julia/environments/v1.10")
-;;         (add-hook 'julia-mode-hook #'lsp-mode))
 
 ;; (defun my/julia-repl-send-cell() 
 ;;   ;; "Send the current julia cell (delimited by ###) to the julia shell"

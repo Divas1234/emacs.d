@@ -30,14 +30,6 @@
 ;;counsel快速搜索
 ;;(global-set-key (kbd "C-s") 'counsel-grep)
  
-;;counsel mode
-(ivy-mode 1)
-(counsel-mode 1)
-(setq ivy-use-virtual-buffers t)
-(setq ivy-use-selectable-prompt t)
-(setq enable-recursive-minibuffers t)
-(setq ivy-count-format "(%d/%d) ")
-(setq search-default-mode #'char-fold-to-regexp)
  
 ;;搜索最近访问文件
 ;;(global-set-key (kbd "C-x b") 'ivy-switch-buffer)
@@ -50,7 +42,40 @@
 (global-set-key (kbd "C-s") 'counsel-grep-or-swiper-backward)
 
 (use-package counsel
-  :ensure t)
+  :demand
+  :bind (("C-c a" . swiper-all)
+         ("C-c e" . counsel-flycheck)
+         ("C-c f" . counsel-fzf)
+         ("C-c g" . counsel-git)
+         ("C-c i" . counsel-imenu)
+         ("C-c j" . counsel-git-grep)
+         ("C-c L" . counsel-locate)
+         ("C-c o" . counsel-outline)
+         ("C-c r" . counsel-rg)
+         ("C-c R" . counsel-register)
+         ("C-c T" . counsel-load-theme)
+         ("C-S-s" . swiper)
+         ([remap dired] . counsel-dired))
+  :init
+  (setq ivy-use-virtual-buffers t
+        ivy-use-virtual-buffers t
+        ivy-use-selectable-prompt t
+        enable-recursive-minibuffers t
+        ivy-count-format "(%d/%d) "
+        search-default-mode #'char-fold-to-regexp)
+  :config
+  (ivy-mode 1)
+  (counsel-mode 1))
+
+(use-package ivy-rich
+  :after ivy
+  :config
+  (ivy-rich-mode 1))
+
+(use-package helpful
+  :init
+  (setq counsel-describe-function-function #'helpful-callable)
+  (setq counsel-describe-variable-function #'helpful-variable))
  
 (use-package ivy
   :ensure t
@@ -71,5 +96,18 @@
    ("C-x C-SPC" . 'counsel-mark-ring)
    :map minibuffer-local-map
    ("C-r" . counsel-minibuffer-history)))
+
+;; (setq recentf-max-saved-items 100)
+
+;; (global-set-key "\C-cq" #'bury-buffer)
+
+;; (use-package prescient
+;;   :config
+;;   (prescient-persist-mode))
+
+;; (use-package ivy-prescient
+;;   :after counsel
+;;   :config
+;;   (ivy-prescient-mode))
 
 (provide 'pkg-ivy)

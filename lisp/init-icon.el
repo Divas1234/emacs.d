@@ -11,4 +11,12 @@
 (use-package nerd-icons-dired
   :config (add-hook 'dired-mode-hook #'nerd-icons-dired-mode))
 
+(use-package ctrlf
+  :config
+  (ctrlf-mode))
+
+(use-package ace-jump-mode
+  :bind ("C-." . ace-jump-mode))
+
+
 (provide 'init-icon)

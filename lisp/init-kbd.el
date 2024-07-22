@@ -7,7 +7,8 @@
             ("C-c ^" . crux-top-join-line)
             ("C-x ," . crux-find-user-init-file)
             ("C-S-d" . crux-duplicate-current-line-or-region)
-            ("C-S-k" . crux-smart-kill-line)))
+            ("C-S-k" . crux-smart-kill-line)
+            ("C-c k" . crux-smart-kill-line)))
 
 (use-package which-key
     :defer nil
@@ -22,5 +23,6 @@
           which-key-show-prefix 'left
           which-key-show-remaining-keys nil)
     (which-key-mode))
+
 
 (provide 'init-kbd)

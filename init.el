@@ -17,10 +17,9 @@
     (file-exists-p custom-file)
     (load-file custom-file))
 
-(require 'init-startup)
+;; (require 'init-startup)
 (require 'init-elpa)
 (require 'init-package)
-(require 'init-ui)
 (require 'init-checkos)
 (require 'init-kbd)
 (require 'pkg-ivy)
@@ -39,13 +38,13 @@
 (require 'pkg-search)
 (require 'pkg-tabbar)
 (require 'init-standardtheme)
-;; (require 'pkg-tabbar)
+(require 'pkg-tabbar)
 (require 'pkg-tabnine)
 ;;encodingfont
 (add-hook 'after-init-hook 'global-company-mode)
 (require 'pkg-pdftool)
 (require 'pkg-dired)
-
+(require 'init-ui)
 
 (use-package emacs
 :ensure
@@ -66,3 +65,11 @@ charset
                     (font-spec :family "Hack" :size 12))))
         (set-face-attribute 'default nil :font "Hack 12")))
 (put 'dired-find-alternate-file 'disabled nil)
+
+;;(when 
+;;    (display-graphic-p)
+;;    (require 'all-the-icons))
+;;;;or
+;;(use-package all-the-icons
+;;:if
+;;    (display-graphic-p))

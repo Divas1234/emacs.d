@@ -17,7 +17,14 @@
 (push '(company-semantic :with company-yasnippet) company-backends)
 :hook ((after-init global-company-mode)))
 
+
+(use-package company-prescient
+  :after company
+  :config
+  (company-prescient-mode))
+  
 (global-set-key (kbd "<tab>") #'company-indent-or-complete-common)
+
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-/") #'company-complete))
 (with-eval-after-load 'company
